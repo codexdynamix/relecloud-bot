@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#11131b">
+    <meta name="description" content="Relecloud livestream membership, referrals, and panel applications.">
+    <title>Relecloud Live</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="Relecloud Live home">
+          <span class="brand-mark" aria-hidden="true">R</span>
+          <span class="brand-copy"><strong>RELECLOUD</strong><small>LIVE COMMUNITY</small></span>
+        </a>
+        <span class="live-pill"><span></span> MEMBERS CLUB</span>
+      </header>
+
+      <section class="hero" id="top">
+        <p class="eyebrow">YOUR FRONT ROW STARTS HERE</p>
+        <h1>Welcome in,<br><span id="first-name">friend</span>.</h1>
+        <p class="hero-copy">Live conversations. Fresh perspectives. A seat at the table.</p>
+      </section>
+
+      <section class="membership card card-featured" aria-labelledby="membership-title">
+        <div class="card-heading">
+          <div>
+            <p class="eyebrow">THE INNER CIRCLE</p>
+            <h2 id="membership-title">Lifetime access</h2>
+          </div>
+          <span class="sparkle" aria-hidden="true">✦</span>
+        </div>
+        <p class="muted">Join exclusive livestreams and become part of the Relecloud community.</p>
+        <div class="membership-bottom">
+          <div class="price"><strong id="membership-price">—</strong><span>Telegram Stars · one time</span></div>
+          <span id="membership-status" class="status-chip">Checking membership</span>
+        </div>
+        <div class="button-row">
+          <button id="membership-button" class="button button-primary" type="button">Loading…</button>
+          <button id="access-button" class="button button-secondary" type="button" hidden>Open livestream channel</button>
+        </div>
+        <p class="fine-print">Digital membership is paid in Telegram Stars. The USD value varies by purchase method and region.</p>
+      </section>
+
+      <section class="card" aria-labelledby="affiliate-title">
+        <div class="section-title">
+          <span class="section-icon icon-violet" aria-hidden="true">↗</span>
+          <div><p class="eyebrow">GROW TOGETHER</p><h2 id="affiliate-title">Your referrals</h2></div>
+        </div>
+        <p class="muted">Share your personal invite. Earn a <strong>$1 USDT</strong> direct-referral commission when an eligible referral completes a paid membership.</p>
+        <div class="stats">
+          <div class="stat"><strong id="referral-count">—</strong><span>verified referrals</span></div>
+          <div class="stat"><strong id="pending-amount">—</strong><span>pending USDT</span></div>
+          <div class="stat"><strong id="paid-amount">—</strong><span>marked paid</span></div>
+        </div>
+        <button id="copy-link-button" class="button button-secondary button-wide" type="button" disabled>Get your invite link</button>
+        <p class="fine-print">Commissions are tracked by the hosts and paid manually after the verification hold period. Referrals do not guarantee a panel place.</p>
+      </section>
+
+      <section class="card" aria-labelledby="panel-title">
+        <div class="section-title">
+          <span class="section-icon icon-gold" aria-hidden="true">✳</span>
+          <div><p class="eyebrow">BRING YOUR PERSPECTIVE</p><h2 id="panel-title">Apply for a panel</h2></div>
+        </div>
+        <p class="muted">Share the topic you want to explore and what you would bring to the conversation. Hosts review every application separately.</p>
+        <label class="sr-only" for="application">Your panel application</label>
+        <textarea id="application" rows="4" maxlength="2000" placeholder="Tell us what you would love to discuss…"></textarea>
+        <div class="form-footer"><span id="application-status" class="fine-print">20–2000 characters</span><button id="apply-button" class="button button-secondary" type="button">Submit application</button></div>
+      </section>
+
+      <section id="admin-card" class="card admin-card" aria-labelledby="admin-title" hidden>
+        <div class="section-title">
+          <span class="section-icon icon-gold" aria-hidden="true">⌘</span>
+          <div><p class="eyebrow">HOST CONSOLE</p><h2 id="admin-title">Community operations</h2></div>
+        </div>
+        <p class="muted">Review panel applications and record affiliate payouts after sending USDT.</p>
+        <div id="admin-applications" class="admin-list"></div>
+        <div id="admin-commissions" class="admin-list"></div>
+      </section>
+
+      <section class="how-it-works" aria-label="Membership information">
+        <details>
+          <summary>How membership and Stars work</summary>
+          <p>Membership is a one-time Telegram Stars payment for lifetime access to exclusive livestreams. The USD value of Stars depends on Telegram's purchase method and region.</p>
+        </details>
+        <details>
+          <summary>How referral rewards work</summary>
+          <p>Rewards apply to direct referrals only after their paid membership is confirmed. The $1 USDT commission is held for verification, then transferred manually by the hosts. Invite links require an active membership.</p>
+        </details>
+        <details>
+          <summary>How panel applications work</summary>
+          <p>Panel applications are reviewed separately by the hosts. Membership or referrals do not guarantee selection.</p>
+        </details>
+      </section>
+
+      <p id="notice" class="notice" role="status" aria-live="polite" hidden></p>
+      <footer>
+        <span>Made for curious minds.</span>
+        <a href="#membership-title">Membership details</a>
+      </footer>
+    </main>
+  </body>
+</html>
